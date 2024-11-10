@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.toggle-btn {
+    background-color: #1abc9c;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.sidebar {
+    width: 60px; /* Small width for the collapsed state */
+    background-color: #2c3e50;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: width 0.3s ease;
+    z-index: 5;
+    overflow: hidden; /* Hide content when collapsed */
+}
+
+.sidebar.expanded {
+    width: 250px; /* Full width when expanded */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+.sidebar li {
+    padding: 20px;
+    cursor: pointer;
+    text-align: center; /* Center icons/text */
+    font-size: 24px; /* Larger icon size */
+}
+
+.sidebar li:hover {
+    background-color: #34495e;
+}
+
+.content {
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+.content.shifted {
+    margin-left: 250px; /* Shift content when sidebar expands */
+}
+
+.sidebar li i {
+    display: inline-block; /* Show icon by default */
+}
+
+.sidebar li span {
+    display: none; /* Hide text by default */
+}
+
+.sidebar.expanded li i {
+    display: none; /* Hide icon when sidebar is expanded */
+}
+
+.sidebar.expanded li span {
+    display: inline-block; /* Show text when sidebar is expanded */
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
