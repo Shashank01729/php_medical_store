@@ -6,14 +6,14 @@
     <title>Medical Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <!-- Include FontAwesome for Icons -->
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body onload="loadContent('home')">
-    <!-- Hamburger button always visible for toggling the sidebar -->
+   
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     
-    <!-- Sidebar hidden initially with 'hidden' class -->
+  
     <div class="sidebar">
         <ul>
             <li onclick="loadContent('home')">
@@ -32,7 +32,7 @@
     </div>
     
     <div class="content" id="content-area">
-        <!-- Default content will load here (e.g., Home) -->
+        
     </div>
 </body>
 </html>
